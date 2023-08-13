@@ -12,16 +12,16 @@ const todos = [
 ];
 
 export const handlers = [
-  rest.get("http://localhost:3001/api/todos", async (req, res, ctx) => {
+  rest.get("http://localhost:3000/api/todos", async (req, res, ctx) => {
     return res(ctx.json(todos));
   }),
-  rest.post("http://localhost:3001/api/todo", async (req, res, ctx) => {
+  rest.post("http://localhost:3000/api/todo", async (req, res, ctx) => {
     const { todo } = req.body;
     console.log(JSON.stringify(todo));
     todos.push(todo);
     return res(ctx.json(todos));
   }),
-  rest.get("http://localhost:3001/api/projects", async (req, res, ctx) => {
+  rest.get("http://localhost:3000/api/projects", async (req, res, ctx) => {
     const pageIndex = req.url.searchParams.get("page");
     return res(
       ctx.json({
@@ -36,6 +36,7 @@ export const handlers = [
           { id: `5${pageIndex}`, name: `jimmy 5-${pageIndex}` },
         ],
         hasMore: pageIndex < 4,
+        nextCursor: pageIndex + 1,
       })
     );
   }),

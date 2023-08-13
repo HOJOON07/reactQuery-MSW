@@ -10,7 +10,7 @@ export default function Pagination() {
 
   const { isLoading, isError, error, data, isFetching, isPreviousData } =
     useQuery(["projects", page], () => fetchProjects(page), {
-      // keepPreviousData: true,
+      keepPreviousData: true,
     });
   //페이지값을 계속 주입해주는데 페이지 값은 로컬상태로 관리하고
   //useQuery -> fetchProjects

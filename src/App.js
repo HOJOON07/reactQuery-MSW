@@ -2,6 +2,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import Example from "./ReactQuery/Example";
 import QuickStart from "./ReactQuery/QuickStart";
 import Pagination from "./ReactQuery/Pagination";
+import InfiniteScroll from "./ReactQuery/InfiniteScroll";
 
 const queryClinet = new QueryClient();
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <Example></Example>
         <QuickStart></QuickStart>
         <Pagination></Pagination>
+        <InfiniteScroll></InfiniteScroll>
       </QueryClientProvider>
     </div>
   );
