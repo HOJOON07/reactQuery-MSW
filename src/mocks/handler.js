@@ -36,7 +36,7 @@ export const handlers = [
           { id: `5${pageIndex}`, name: `jimmy 5-${pageIndex}` },
         ],
         hasMore: pageIndex < 4,
-        nextCursor: pageIndex + 1,
+        nextCursor: pageIndex < 4 ? parseInt(pageIndex) + 1 : undefined,
       })
     );
   }),

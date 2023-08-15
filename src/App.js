@@ -9,9 +9,9 @@ function App() {
   return (
     <div className="App">
       <QueryClientProvider client={queryClinet}>
-        <Example></Example>
+        {/* <Example></Example>
         <QuickStart></QuickStart>
-        <Pagination></Pagination>
+        <Pagination></Pagination> */}
         <InfiniteScroll></InfiniteScroll>
       </QueryClientProvider>
     </div>
